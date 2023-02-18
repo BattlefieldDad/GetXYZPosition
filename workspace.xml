@@ -1,0 +1,224 @@
+<xml xmlns="https://developers.google.com/blockly/xml">
+  <variables>
+    <variable type="Global" id="zy9{SzbYw=tJ0UfHYAg(">vectorCheck</variable>
+  </variables>
+  <block type="modBlock" deletable="false" x="10" y="10">
+    <statement name="RULES">
+      <block type="ruleBlock">
+        <mutation isOnGoingEvent="false"></mutation>
+        <field name="NAME">New Rule</field>
+        <field name="EVENTTYPE">OnPlayerDeployed</field>
+        <statement name="ACTIONS">
+          <block type="While">
+            <value name="VALUE-0">
+              <block type="GetSoldierState">
+                <value name="VALUE-0">
+                  <block type="EventPlayer"></block>
+                </value>
+                <value name="VALUE-1">
+                  <block type="SoldierStateBoolItem">
+                    <field name="VALUE-0">SoldierStateBool</field>
+                    <field name="VALUE-1">IsAlive</field>
+                  </block>
+                </value>
+              </block>
+            </value>
+            <statement name="DO">
+              <block type="DisplayCustomNotificationMessage">
+                <value name="VALUE-0">
+                  <block type="Message">
+                    <value name="VALUE-0">
+                      <block type="Text">
+                        <field name="TEXT">X: {}  Y: {}  Z: {}</field>
+                      </block>
+                    </value>
+                    <value name="VALUE-1">
+                      <block type="RoundToInteger">
+                        <value name="VALUE-0">
+                          <block type="XComponentOf">
+                            <value name="VALUE-0">
+                              <block type="GetSoldierState">
+                                <value name="VALUE-0">
+                                  <block type="EventPlayer"></block>
+                                </value>
+                                <value name="VALUE-1">
+                                  <block type="SoldierStateVectorItem">
+                                    <field name="VALUE-0">SoldierStateVector</field>
+                                    <field name="VALUE-1">GetPosition</field>
+                                  </block>
+                                </value>
+                              </block>
+                            </value>
+                          </block>
+                        </value>
+                      </block>
+                    </value>
+                    <value name="VALUE-2">
+                      <block type="RoundToInteger">
+                        <value name="VALUE-0">
+                          <block type="YComponentOf">
+                            <value name="VALUE-0">
+                              <block type="GetSoldierState">
+                                <value name="VALUE-0">
+                                  <block type="EventPlayer"></block>
+                                </value>
+                                <value name="VALUE-1">
+                                  <block type="SoldierStateVectorItem">
+                                    <field name="VALUE-0">SoldierStateVector</field>
+                                    <field name="VALUE-1">GetPosition</field>
+                                  </block>
+                                </value>
+                              </block>
+                            </value>
+                          </block>
+                        </value>
+                      </block>
+                    </value>
+                    <value name="VALUE-3">
+                      <block type="RoundToInteger">
+                        <value name="VALUE-0">
+                          <block type="ZComponentOf">
+                            <value name="VALUE-0">
+                              <block type="GetSoldierState">
+                                <value name="VALUE-0">
+                                  <block type="EventPlayer"></block>
+                                </value>
+                                <value name="VALUE-1">
+                                  <block type="SoldierStateVectorItem">
+                                    <field name="VALUE-0">SoldierStateVector</field>
+                                    <field name="VALUE-1">GetPosition</field>
+                                  </block>
+                                </value>
+                              </block>
+                            </value>
+                          </block>
+                        </value>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+                <value name="VALUE-1">
+                  <block type="CustomMessagesItem">
+                    <field name="VALUE-0">CustomMessages</field>
+                    <field name="VALUE-1">HeaderText</field>
+                  </block>
+                </value>
+                <value name="VALUE-2">
+                  <block type="Number">
+                    <field name="NUM">1</field>
+                  </block>
+                </value>
+                <next>
+                  <block type="Wait">
+                    <value name="VALUE-0">
+                      <block type="Number">
+                        <field name="NUM">0.1</field>
+                      </block>
+                    </value>
+                  </block>
+                </next>
+              </block>
+            </statement>
+          </block>
+        </statement>
+      </block>
+    </statement>
+  </block>
+  <block type="DisplayCustomNotificationMessage" x="105" y="525">
+    <value name="VALUE-0">
+      <block type="Message">
+        <value name="VALUE-0">
+          <block type="Text">
+            <field name="TEXT">X: {}  Y: {}  Z: {}</field>
+          </block>
+        </value>
+        <value name="VALUE-1">
+          <block type="RoundToInteger">
+            <value name="VALUE-0">
+              <block type="XComponentOf">
+                <value name="VALUE-0">
+                  <block type="GetVehicleState">
+                    <value name="VALUE-0">
+                      <block type="GetVehicleFromPlayer">
+                        <value name="VALUE-0">
+                          <block type="EventPlayer"></block>
+                        </value>
+                      </block>
+                    </value>
+                    <value name="VALUE-1">
+                      <block type="VehicleStateVectorItem">
+                        <field name="VALUE-0">VehicleStateVector</field>
+                        <field name="VALUE-1">FacingDirection</field>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+              </block>
+            </value>
+          </block>
+        </value>
+        <value name="VALUE-2">
+          <block type="RoundToInteger">
+            <value name="VALUE-0">
+              <block type="YComponentOf">
+                <value name="VALUE-0">
+                  <block type="GetVehicleState">
+                    <value name="VALUE-0">
+                      <block type="GetVehicleFromPlayer">
+                        <value name="VALUE-0">
+                          <block type="EventPlayer"></block>
+                        </value>
+                      </block>
+                    </value>
+                    <value name="VALUE-1">
+                      <block type="VehicleStateVectorItem">
+                        <field name="VALUE-0">VehicleStateVector</field>
+                        <field name="VALUE-1">FacingDirection</field>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+              </block>
+            </value>
+          </block>
+        </value>
+        <value name="VALUE-3">
+          <block type="RoundToInteger">
+            <value name="VALUE-0">
+              <block type="ZComponentOf">
+                <value name="VALUE-0">
+                  <block type="GetVehicleState">
+                    <value name="VALUE-0">
+                      <block type="GetVehicleFromPlayer">
+                        <value name="VALUE-0">
+                          <block type="EventPlayer"></block>
+                        </value>
+                      </block>
+                    </value>
+                    <value name="VALUE-1">
+                      <block type="VehicleStateVectorItem">
+                        <field name="VALUE-0">VehicleStateVector</field>
+                        <field name="VALUE-1">FacingDirection</field>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+              </block>
+            </value>
+          </block>
+        </value>
+      </block>
+    </value>
+    <value name="VALUE-1">
+      <block type="CustomMessagesItem">
+        <field name="VALUE-0">CustomMessages</field>
+        <field name="VALUE-1">MessageText1</field>
+      </block>
+    </value>
+    <value name="VALUE-2">
+      <block type="Number">
+        <field name="NUM">1</field>
+      </block>
+    </value>
+  </block>
+</xml>
