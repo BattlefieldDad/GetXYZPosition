@@ -2,7 +2,7 @@
   <variables>
     <variable type="Global" id="zy9{SzbYw=tJ0UfHYAg(">vectorCheck</variable>
   </variables>
-  <block type="modBlock" deletable="false" x="10" y="10">
+  <block type="modBlock" deletable="false" x="-14" y="-236">
     <statement name="RULES">
       <block type="ruleBlock">
         <mutation isOnGoingEvent="false"></mutation>
@@ -121,10 +121,111 @@
             </statement>
           </block>
         </statement>
+        <next>
+          <block type="ruleBlock">
+            <mutation isOnGoingEvent="true"></mutation>
+            <field name="NAME">New Rule</field>
+            <field name="EVENTTYPE">Ongoing</field>
+            <field name="OBJECTTYPE">Player</field>
+            <statement name="CONDITIONS">
+              <block type="conditionBlock">
+                <value name="CONDITION">
+                  <block type="GetSoldierState">
+                    <value name="VALUE-0">
+                      <block type="EventPlayer"></block>
+                    </value>
+                    <value name="VALUE-1">
+                      <block type="SoldierStateBoolItem">
+                        <field name="VALUE-0">SoldierStateBool</field>
+                        <field name="VALUE-1">IsInteracting</field>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+              </block>
+            </statement>
+            <statement name="ACTIONS">
+              <block type="SendErrorReport">
+                <value name="VALUE-0">
+                  <block type="Message">
+                    <value name="VALUE-0">
+                      <block type="Text">
+                        <field name="TEXT">X: {}  Y: {}  Z: {}</field>
+                      </block>
+                    </value>
+                    <value name="VALUE-1">
+                      <block type="RoundToInteger">
+                        <value name="VALUE-0">
+                          <block type="XComponentOf">
+                            <value name="VALUE-0">
+                              <block type="GetSoldierState">
+                                <value name="VALUE-0">
+                                  <block type="EventPlayer"></block>
+                                </value>
+                                <value name="VALUE-1">
+                                  <block type="SoldierStateVectorItem">
+                                    <field name="VALUE-0">SoldierStateVector</field>
+                                    <field name="VALUE-1">GetPosition</field>
+                                  </block>
+                                </value>
+                              </block>
+                            </value>
+                          </block>
+                        </value>
+                      </block>
+                    </value>
+                    <value name="VALUE-2">
+                      <block type="RoundToInteger">
+                        <value name="VALUE-0">
+                          <block type="YComponentOf">
+                            <value name="VALUE-0">
+                              <block type="GetSoldierState">
+                                <value name="VALUE-0">
+                                  <block type="EventPlayer"></block>
+                                </value>
+                                <value name="VALUE-1">
+                                  <block type="SoldierStateVectorItem">
+                                    <field name="VALUE-0">SoldierStateVector</field>
+                                    <field name="VALUE-1">GetPosition</field>
+                                  </block>
+                                </value>
+                              </block>
+                            </value>
+                          </block>
+                        </value>
+                      </block>
+                    </value>
+                    <value name="VALUE-3">
+                      <block type="RoundToInteger">
+                        <value name="VALUE-0">
+                          <block type="ZComponentOf">
+                            <value name="VALUE-0">
+                              <block type="GetSoldierState">
+                                <value name="VALUE-0">
+                                  <block type="EventPlayer"></block>
+                                </value>
+                                <value name="VALUE-1">
+                                  <block type="SoldierStateVectorItem">
+                                    <field name="VALUE-0">SoldierStateVector</field>
+                                    <field name="VALUE-1">GetPosition</field>
+                                  </block>
+                                </value>
+                              </block>
+                            </value>
+                          </block>
+                        </value>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+              </block>
+            </statement>
+          </block>
+        </next>
       </block>
     </statement>
   </block>
-  <block type="DisplayCustomNotificationMessage" x="105" y="525">
+  <block type="DisplayCustomNotificationMessage" x="32" y="719">
     <value name="VALUE-0">
       <block type="Message">
         <value name="VALUE-0">
