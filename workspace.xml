@@ -339,4 +339,38 @@
       </block>
     </value>
   </block>
+  <block type="CreateVector" x="289" y="982">
+    <value name="VALUE-0">
+      <block type="Number">
+        <field name="NUM">0</field>
+      </block>
+    </value>
+    <value name="VALUE-1">
+      <block type="Number">
+        <field name="NUM">0</field>
+      </block>
+    </value>
+    <value name="VALUE-2">
+      <block type="Number">
+        <field name="NUM">0</field>
+      </block>
+    </value>
+  </block>
+  <block type="CreateVector" x="315" y="1064">
+    <value name="VALUE-0">
+      <block type="Number">
+        <field name="NUM">0</field>
+      </block>
+    </value>
+    <value name="VALUE-1">
+      <block type="Number">
+        <field name="NUM">0</field>
+      </block>
+    </value>
+    <value name="VALUE-2">
+      <block type="Number">
+        <field name="NUM">0</field>
+      </block>
+    </value>
+  </block>
 </xml>
